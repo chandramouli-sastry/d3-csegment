@@ -4,11 +4,12 @@ A D3-JS plugin for drawing circular segments.
 ## Installing
 Download zip: https://github.com/chandramouli-sastry/d3-csegment/archive/master.zip
 
-## Example
+## Example Usage
 The following code shows a simple use case. Refer to the image embedded below.
 <pre>var csegment = d3.csegment()
                  .radius(50) // the radius of the circle
                  .height(40); // the height of the circular segment
+                 
 d3.select('body').append('svg')
                 .append('path')
                 .attr('d',csegment)
@@ -37,4 +38,4 @@ Sets the height of the circular segment to d and returns the generator. As of th
 
 Sets the inclination of the central axis of the circular segment with respect to +ve x-axis and returns the generator. As of this version, d is expected to be a constant. It defaults to `Math.PI/2`. 
 
-
+Refer to this <a href='d3-csegment/csegment-example.html'>Example</a> for usage with d3 enter method.
