@@ -38,4 +38,4 @@ Sets the height of the circular segment to d and returns the generator. As of th
 
 Sets the inclination of the central axis of the circular segment with respect to +ve x-axis and returns the generator. As of this version, d is expected to be a constant. It defaults to `Math.PI/2`. 
 
-Refer to this <a href='d3-csegment/csegment-example.html'>Example</a> for usage with d3 enter method.
+Refer to this <a href='https://github.com/chandramouli-sastry/d3-csegment/blob/master/csegment-example.html'>Example</a> for usage with d3 enter method.
