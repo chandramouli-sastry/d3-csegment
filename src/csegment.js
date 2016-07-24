@@ -38,8 +38,8 @@ export default function()
                   };
     cseg.angle= function(a)
                  {
-                   if(a==null)
-                    return;
+				           if(a==null)
+					            return this;
                    this._.angle = a;
                    return this;
                  };
