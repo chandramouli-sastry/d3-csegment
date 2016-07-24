@@ -1,14 +1,40 @@
-# d3-foo
-
+#d3-csegment
+A D3-JS plugin for drawing circular segments.
 
 ## Installing
+Download zip: https://github.com/chandramouli-sastry/d3-csegment/archive/master.zip
 
-If you use NPM, `npm install d3-foo`. Otherwise, download the [latest release](https://github.com/d3/d3-foo/releases/latest).
+## Example
+The following code shows a simple use case. Refer to the image embedded below.
+<pre>var csegment = d3.csegment()
+                 .radius(50) // the radius of the circle
+                 .height(40); // the height of the circular segment
+d3.select('body').append('svg')
+                .append('path')
+                .attr('d',csegment)
+                .attr('fill','green');`</pre>
+## Circular-Segment
+The following image aids in understanding the API. You can read more at: http://mathworld.wolfram.com/CircularSegment.html 
+
+<img src="./cseg_final.PNG"></img>
 
 ## API Reference
+<a href="#csegment" name="csegment">#</a> d3.<b>csegment</b>()
 
-YOUR API DOCUMENTATION HERE. Use bold for symbols (such as constructor and method names) and italics for instances. See the other D3 modules for examples.
+Creates a new csegment generator.
 
-<a href="#foo" name="foo">#</a> <b>foo</b>()
+`var csegment = d3.csegment();`
 
-Computes the answer to the ultimate question of life, the universe, and everything.
+<i>csegment.radius(d)</i>
+
+Sets the radius to d and returns the generator. As of this version, d is expected to be a constant. If no arguments are passed, the radius is set to `undefined`.
+
+<i>csegment.height(d)</i>
+
+Sets the height of the circular segment to d and returns the generator. As of this version, d is expected to be a constant. If no arguments are passed, the height is set to `undefined`.
+
+<i>csegment.angle(d)</i>
+
+Sets the inclination of the central axis of the circular segment with respect to +ve x-axis and returns the generator. As of this version, d is expected to be a constant. It defaults to `Math.PI/2`. 
+
+
