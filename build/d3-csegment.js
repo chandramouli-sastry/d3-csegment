@@ -44,6 +44,8 @@
                     };
       cseg.angle= function(a)
                    {
+                     if(a==null)
+                      return this;
                      this._.angle = a;
                      return this;
                    };
