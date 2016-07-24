@@ -1,0 +1,34 @@
+<html>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="./build/d3-csegment.js"></script>
+<script>
+function onload()
+{
+  var data = [
+         {r:50,h:6.698,angle:Math.PI/2},
+         {r:50,h:6.698,angle:Math.PI/2+Math.PI/3},
+         {r:50,h:6.698,angle:Math.PI/2+2*Math.PI/3},
+         {r:50,h:6.698,angle:Math.PI/2+3*Math.PI/3},
+         {r:50,h:6.698,angle:Math.PI/2+4*Math.PI/3},
+         {r:50,h:6.698,angle:Math.PI/2+5*Math.PI/3}];
+  var svg = d3.select("#svg");
+  var csegdata=svg.selectAll("path.cseg").data(data).enter();
+  var c=d3.scale.category20();
+  csegdata.append("path")
+     .attr("class","cseg")
+     .attr("d", function(d){
+                   return d3.csegment()
+                           .radius(d.r*4)
+                           .height(d.h*4)
+                           .angle(d.angle);
+                 })
+      .attr("transform","translate(300,250)")
+      .attr("fill",function(d,i){return c(i);})
+      .attr("stroke","black");
+}
+</script>
+<body onload="onload()">
+<svg id="svg" width=500 height=500>
+</svg>
+</body>
+</html>

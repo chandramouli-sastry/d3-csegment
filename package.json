@@ -1,0 +1,28 @@
+{
+  "name": "d3-csegment",
+  "version": "0.0.1",
+  "description": "A D3 plugin that eases drawing of Circular Segments",
+  "keywords": [
+    "d3",
+    "d3-module"
+  ],
+  "license": "BSD-3-Clause",
+  "main": "build/d3-csegment.js",
+  "jsnext:main": "index",
+  "homepage": "https://github.com//d3-csegment",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chandramouli-sastry/d3-csegment.git"
+  },
+  "scripts": {
+    "pretest": "rm -rf build && mkdir build && rollup -f umd -n d3 -o build/d3-csegment.js -- index.js",
+    "test": "node test/csegment-test.js",
+    "prepublish": "node test/csegment-test.js && uglifyjs build/d3-csegment.js -c -m -o build/d3-csegment.min.js",
+    "postpublish": "zip -j build/d3-csegment.zip -- LICENSE README.md build/d3-csegment.js build/d3-csegment.min.js"
+  },
+  "devDependencies": {
+    "rollup": "0.27",
+    "tape": "4",
+    "uglify-js": "2"
+  }
+}
