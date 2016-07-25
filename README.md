@@ -10,10 +10,9 @@ The following code shows a simple use case. Refer to the image embedded below.
                  .radius(50) // the radius of the circle
                  .height(40); // the height of the circular segment
                  
-d3.select('body').append('svg')
-                .append('path')
-                .attr('d',csegment)
-                .attr('fill','green');`</pre>
+svg.append('path')
+   .attr('d',csegment)
+   .attr('fill','green');`</pre>
 ## Circular-Segment
 The following image aids in understanding the API. You can read more at: http://mathworld.wolfram.com/CircularSegment.html 
 
