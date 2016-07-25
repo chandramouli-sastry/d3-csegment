@@ -31,7 +31,7 @@ Sets the radius to d and returns the generator. As of this version, d is expecte
 
 <i>csegment.height(d)</i>
 
-Sets the height of the circular segment to d and returns the generator. As of this version, d is expected to be a constant. If no arguments are passed, the height is set to `undefined`.
+Sets the height of the circular segment to d and returns the generator. The height should be lesser than or equal to the radius. If it is equal to the radius, it draws a semi-circle. As of this version, d is expected to be a constant. If no arguments are passed, the height is set to `undefined`.
 
 <i>csegment.angle(d)</i>
 
